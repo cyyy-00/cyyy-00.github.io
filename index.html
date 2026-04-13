@@ -1,310 +1,208 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>机器人项目补充材料 | yyy ccc</title>
-  <meta name="description" content="具身智能、计算机视觉与机器人系统集成项目补充材料：湘江智伴自研机器人、乐聚机器人、宇树 G1。" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header class="hero" id="top">
-    <nav class="nav container">
-      <a class="logo" href="#top">Robot Portfolio</a>
-      <div class="nav-links">
-        <a href="#about">关于我</a>
-        <a href="#projects">项目总览</a>
-        <a href="#xiangjiang">湘江智伴</a>
-        <a href="#leju">乐聚机器人</a>
-        <a href="#g1">宇树 G1</a>
-        <a href="#contact">联系</a>
-      </div>
-    </nav>
+export default function RoboticsPortfolio() {
+  const projects = [
+    {
+      id: "xiangjiang-zhiban",
+      title: "湘江智伴自研机器人",
+      period: "2024.08 – 2024.12",
+      subtitle: "居家服务机器人",
+      metrics: ["抓取成功率 90%+", "LLM 任务规划", "Sim2Real 部署"],
+      videos: [
+        "收发快递演示",
+        "垃圾分拣演示",
+        "通用抓取演示",
+        "场景协作演示",
+      ],
+      gallery: ["机器人全景图", "抓取现场图", "家居场景图", "媒体报道图"],
+    },
+    {
+      id: "leju-robot",
+      title: "乐聚机器人",
+      period: "2025.07 – 2025.11",
+      subtitle: "陪护与安全监护机器人",
+      metrics: ["跌倒检测 95%", "抓取成功率 80%+", "ROS 节点部署"],
+      videos: [
+        "跌倒检测演示",
+        "抓取识别演示",
+        "安全监护演示",
+        "系统联调演示",
+      ],
+      gallery: ["实机场景图", "抓取过程图", "相机视角图", "部署现场图"],
+    },
+    {
+      id: "unitree-g1",
+      title: "宇树机器人 G1",
+      period: "2025.12 – 2026.02",
+      subtitle: "仿人机器人动作复现",
+      metrics: ["动作复现", "Sim2Sim / Sim2Real", "真机稳定部署"],
+      videos: [
+        "仿真动作演示",
+        "真机动作演示",
+        "训练过程演示",
+        "动捕复现演示",
+      ],
+      gallery: ["宇树 G1 全景图", "仿真截图", "真机现场图", "数据流程图"],
+    },
+  ];
 
-    <div class="hero-content container">
-      <div class="hero-text">
-        <p class="eyebrow">简历补充材料网站</p>
-        <h1>具身智能与机器人项目作品集</h1>
-        <p class="hero-desc">
-          该页面用于补充展示我的机器人项目经历，围绕<strong>湘江智伴自研机器人</strong>、<strong>乐聚机器人</strong>与<strong>宇树 G1</strong>三个项目，集中呈现我在任务规划、视觉感知、抓取操作、行为分析、模仿学习与 Sim2Real 系统集成方面的工作成果。
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">查看项目</a>
-          <a class="btn btn-secondary" href="#contact">联系方式</a>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="stat-card">
-          <span class="stat-label">研究方向</span>
-          <span class="stat-value">具身智能 · 计算机视觉</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">展示定位</span>
-          <span class="stat-value">机器人项目证明页</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label">核心能力</span>
-          <span class="stat-value">感知 / 抓取 / 行为分析 / Sim2Real</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="section container" id="about">
-      <div class="section-head">
-        <p class="eyebrow">About</p>
-        <h2>关于我</h2>
-      </div>
-      <div class="about-grid">
-        <div class="card">
-          <p>
-            我目前聚焦于<strong>具身智能、计算机视觉与机器人系统集成</strong>，持续参与机器人在居家服务、安全监护、动作复现等场景下的算法开发与部署工作。
-          </p>
-          <p>
-            这个网站不是传统个人主页，而是面向导师、面试官或合作方的<strong>项目补充材料页</strong>，用于更直观地展示我在三个机器人项目中的职责、技术路线、结果指标与视频材料。
-          </p>
-        </div>
-        <div class="card tags-card">
-          <h3>关键词</h3>
-          <div class="tag-list">
-            <span>Embodied AI</span>
-            <span>Computer Vision</span>
-            <span>Robot Grasping</span>
-            <span>Behavior Analysis</span>
-            <span>ROS</span>
-            <span>LLM Planning</span>
-            <span>Motion Imitation</span>
-            <span>Sim2Real</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Projects</p>
-          <h2>项目总览</h2>
-          <p>三个项目对应三个机器人补充材料模块，建议每个模块都配 1–2 个高质量演示视频。</p>
-        </div>
-
-        <div class="project-grid overview-grid">
-          <article class="project-overview card">
-            <span class="project-index">01</span>
-            <h3>湘江智伴自研机器人</h3>
-            <p>居家服务机器人项目，突出 LLM 任务规划、通用抓取与 Sim2Real 落地能力。</p>
-            <a href="#xiangjiang" class="text-link">查看详情 →</a>
-          </article>
-
-          <article class="project-overview card">
-            <span class="project-index">02</span>
-            <h3>乐聚机器人</h3>
-            <p>居家服务与安全监护场景项目，突出跌倒检测、抓取感知与 ROS 部署。</p>
-            <a href="#leju" class="text-link">查看详情 →</a>
-          </article>
-
-          <article class="project-overview card">
-            <span class="project-index">03</span>
-            <h3>宇树 G1</h3>
-            <p>人形机器人动作复现项目，突出动作数据管道、仿真训练与 Sim2Real 集成。</p>
-            <a href="#g1" class="text-link">查看详情 →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="xiangjiang">
-      <div class="section-head project-head">
+  const mediaCard = (label) => (
+    <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div className="flex aspect-video items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200 text-center text-slate-500">
         <div>
-          <p class="eyebrow">Project 01</p>
-          <h2>湘江智伴自研机器人</h2>
-          <p class="muted">2024.08 – 2024.12 · 居家服务机器人 · LLM任务规划 / 通用抓取 / Sim2Real</p>
+          <p className="text-xs uppercase tracking-[0.25em]">Media</p>
+          <p className="mt-2 text-base font-semibold">{label}</p>
         </div>
       </div>
-
-      <div class="project-layout">
-        <div class="project-main card">
-          <h3>项目简介</h3>
-          <p>
-            该项目围绕复杂家居场景下的语义理解、自主协作与通用操作能力展开。我主要参与任务规划、灵巧操作与仿真到真机部署相关工作，推动机器人完成收发快递、垃圾分拣等闭环任务。
-          </p>
-
-          <h3>我的工作</h3>
-          <ul class="feature-list">
-            <li>接入大语言模型实现用户意图理解，并通过 Prompt Engineering 与 CoT 方法将高层自然语言指令拆解为可执行的原子动作序列。</li>
-            <li>主导灵巧手通用抓取与放置算法研发，针对快递、垃圾、办公用品等异形物体优化基于视觉反馈的抓取位姿估计策略。</li>
-            <li>搭建高保真物理仿真环境进行策略预演与逻辑校验，完成相机内参及手眼标定，提升空间映射精度。</li>
-            <li>最终实现垃圾分拣、收发快递等复杂任务闭环，真机抓取成功率达到 90% 以上。</li>
-          </ul>
-
-          <h3>建议展示的视频</h3>
-          <ul class="bullet-list">
-            <li>自然语言指令到任务执行的完整演示</li>
-            <li>快递或垃圾等异形物体抓取与放置视频</li>
-            <li>仿真环境与真机执行效果对照视频</li>
-          </ul>
-        </div>
-
-        <aside class="project-side">
-          <div class="media-card card">
-            <div class="media-placeholder">在这里放项目封面图或视频</div>
-            <p class="media-note">建议替换为：湘江智伴项目总览图 / 收快递演示视频封面</p>
-          </div>
-          <div class="card mini-card">
-            <h4>可补充材料</h4>
-            <ul class="bullet-list compact">
-              <li>媒体报道链接</li>
-              <li>系统流程图</li>
-              <li>标定与抓取示意图</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="leju">
-      <div class="container">
-        <div class="section-head project-head">
-          <div>
-            <p class="eyebrow">Project 02</p>
-            <h2>乐聚机器人</h2>
-            <p class="muted">2025.07 – 2025.11 · 居家服务与安全监护 · 跌倒检测 / 抓取感知 / ROS部署</p>
-          </div>
-        </div>
-
-        <div class="project-layout">
-          <div class="project-main card">
-            <h3>项目简介</h3>
-            <p>
-              该项目聚焦居家服务与安全监护场景，我主导核心视觉算法开发与端到端部署，重点完成跌倒检测、目标识别抓取与感知到控制链路的 ROS 节点化集成。
-            </p>
-
-            <h3>我的工作</h3>
-            <ul class="feature-list">
-              <li>开发基于摄像头的实时跌倒检测系统，利用时空特征提取与关键点追踪技术，有效降低宠物、光影等干扰条件下的误报。</li>
-              <li>在实机测试中实现 95% 的跌倒检测成功率，提升机器人在安全监护场景中的实用性。</li>
-              <li>设计轻量化目标检测与分类模型，并结合 RGB-D 点云数据，为机械臂提供精准抓取位姿引导。</li>
-              <li>在多类目生活用品识别抓取任务中保持 80% 以上成功率，同时将视觉模型高效封装为 ROS 节点，优化推理延迟与系统通讯效率。</li>
-            </ul>
-
-            <h3>建议展示的视频</h3>
-            <ul class="bullet-list">
-              <li>跌倒检测现场演示视频</li>
-              <li>多类目物体识别与抓取演示</li>
-              <li>ROS 节点部署后的实机联调演示</li>
-            </ul>
-          </div>
-
-          <aside class="project-side">
-            <div class="media-card card">
-              <div class="media-placeholder">在这里放项目封面图或视频</div>
-              <p class="media-note">建议替换为：跌倒检测演示封面 / 抓取演示封面</p>
-            </div>
-            <div class="card mini-card">
-              <h4>可补充材料</h4>
-              <ul class="bullet-list compact">
-                <li>检测框结果截图</li>
-                <li>抓取流程图</li>
-                <li>ROS 节点架构图</li>
-              </ul>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="g1">
-      <div class="section-head project-head">
-        <div>
-          <p class="eyebrow">Project 03</p>
-          <h2>宇树机器人 G1</h2>
-          <p class="muted">2025.12 – 2026.02 · 动作复现与系统集成 · 动捕数据处理 / 仿真训练 / Sim2Real</p>
-        </div>
-      </div>
-
-      <div class="project-layout">
-        <div class="project-main card">
-          <h3>项目简介</h3>
-          <p>
-            该项目基于 Beyondmimic 开源框架与动捕设备，构建从人体动作采集、数据处理、强化学习训练到宇树 G1 真机动作复现的完整工具链。我重点负责数据工程、轨迹可行性优化及全链路部署测试。
-          </p>
-
-          <h3>我的工作</h3>
-          <ul class="feature-list">
-            <li>制定人体动作采集规范，完成坐标系对齐、数据重采样与格式转换自动化，构建符合宇树 G1 运动学约束的高质量模仿学习数据集。</li>
-            <li>结合机器人关节限位与动力学特性，对重定向轨迹进行二次校验，剔除物理不可行的高噪帧，提升训练稳定性与收敛速度。</li>
-            <li>主导策略模型的 Sim2Sim 仿真测试与 Sim2Real 真机部署，打通底层控制与通信链路。</li>
-            <li>最终在宇树 G1 真机上实现目标动作的成功且稳定复现。</li>
-          </ul>
-
-          <h3>建议展示的视频</h3>
-          <ul class="bullet-list">
-            <li>人体动作到机器人动作复现对照视频</li>
-            <li>仿真训练片段或策略测试视频</li>
-            <li>宇树 G1 真机稳定执行目标动作的视频</li>
-          </ul>
-        </div>
-
-        <aside class="project-side">
-          <div class="media-card card">
-            <div class="media-placeholder">在这里放项目封面图或视频</div>
-            <p class="media-note">建议替换为：G1 动作复现封面 / 仿真与真机对照图</p>
-          </div>
-          <div class="card mini-card">
-            <h4>可补充材料</h4>
-            <ul class="bullet-list compact">
-              <li>动作处理流程图</li>
-              <li>训练配置说明</li>
-              <li>真机部署现场照片</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Materials Guide</p>
-          <h2>建议你后续补进去的材料</h2>
-        </div>
-
-        <div class="materials-grid">
-          <div class="card">
-            <h3>视频</h3>
-            <p>每个项目建议准备 1–2 个视频，时长控制在 30–90 秒，突出“看得懂、看得快、能证明能力”。</p>
-          </div>
-          <div class="card">
-            <h3>图片</h3>
-            <p>可放现场实机照片、系统总览图、抓取过程图、跌倒检测结果图、G1 动作复现对照图。</p>
-          </div>
-          <div class="card">
-            <h3>外链</h3>
-            <p>可补充 GitHub、论文、媒体报道、比赛获奖页或项目说明文档。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" id="contact">
-    <div class="container footer-grid">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>联系方式</h2>
-        <p>这个网站可以直接作为 PDF 简历中的补充材料链接使用。</p>
-      </div>
-      <div class="contact-card card">
-        <p><strong>姓名：</strong>yyy ccc</p>
-        <p><strong>电话：</strong>18711518368</p>
-        <p><strong>邮箱：</strong><a href="mailto:1623575184@qq.com">1623575184@qq.com</a></p>
-        <p><strong>研究方向：</strong>具身智能、计算机视觉</p>
-        <p><strong>GitHub：</strong><a href="#">请替换为你的 GitHub 链接</a></p>
-        <p><strong>简历 PDF：</strong><a href="#">请替换为你的简历文件链接</a></p>
-      </div>
+      <div className="px-4 py-3 text-sm font-medium text-slate-700">{label}</div>
     </div>
-  </footer>
-</body>
-</html>
+  );
+
+  const imageCard = (label) => (
+    <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+      <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200" />
+      <div className="px-4 py-3 text-sm font-medium text-slate-700">{label}</div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute left-10 top-10 h-40 w-40 rounded-full bg-cyan-400 blur-3xl" />
+          <div className="absolute right-10 top-20 h-52 w-52 rounded-full bg-blue-500 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-indigo-500 blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:px-12">
+          <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+            <div>
+              <div className="mb-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1 text-sm text-slate-200 backdrop-blur">
+                Robotics Portfolio · Video First
+              </div>
+              <h1 className="max-w-4xl text-4xl font-bold tracking-tight md:text-6xl">
+                机器人项目
+                <span className="block text-cyan-300">补充材料展示网站</span>
+              </h1>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-slate-300 md:text-lg">
+                以视频和场景图片为主，快速展示三个机器人项目的真实效果、部署场景与系统能力。
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a href="#projects" className="rounded-2xl bg-cyan-400 px-5 py-3 font-medium text-slate-950 shadow-lg transition hover:scale-[1.02]">
+                  查看项目
+                </a>
+                <a href="#contact" className="rounded-2xl border border-white/20 bg-white/10 px-5 py-3 font-medium text-white backdrop-blur transition hover:bg-white/15">
+                  联系方式
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-300">Projects</p>
+                <p className="mt-3 text-3xl font-semibold">3</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-300">Videos</p>
+                <p className="mt-3 text-3xl font-semibold">12+</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-300">Scenes</p>
+                <p className="mt-3 text-3xl font-semibold">12+</p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/10 p-5 backdrop-blur">
+                <p className="text-sm uppercase tracking-[0.2em] text-slate-300">Focus</p>
+                <p className="mt-3 text-lg font-semibold">视觉 · 抓取 · 行为分析 · Sim2Real</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="mx-auto max-w-7xl space-y-14 px-6 py-14 md:px-10 lg:px-12">
+        {projects.map((project, index) => (
+          <section key={project.id} className="space-y-8">
+            <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <div className="mb-3 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-slate-900 px-3 py-1 text-sm font-medium text-white">
+                    Project {index + 1}
+                  </span>
+                  <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
+                    {project.period}
+                  </span>
+                  <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
+                    {project.subtitle}
+                  </span>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{project.title}</h2>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {project.metrics.map((metric) => (
+                  <span key={metric} className="rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-800">
+                    {metric}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-semibold">项目视频</h3>
+                <p className="text-sm text-slate-500">建议优先放短视频、实机视频、关键演示片段</p>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+                {project.videos.map((item) => (
+                  <div key={item}>{mediaCard(item)}</div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-semibold">场景图片</h3>
+                <p className="text-sm text-slate-500">可放部署现场图、机器人照片、流程图、系统截图</p>
+              </div>
+              <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+                {project.gallery.map((item) => (
+                  <div key={item}>{imageCard(item)}</div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+      </section>
+
+      <section className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:px-10 lg:px-12">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold">建议的视频类型</h3>
+              <div className="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+                <p>实机演示视频</p>
+                <p>仿真过程视频</p>
+                <p>关键能力视频</p>
+                <p>复杂场景测试视频</p>
+              </div>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-lg font-semibold">建议的图片内容</h3>
+              <div className="mt-4 space-y-2 text-sm leading-7 text-slate-600">
+                <p>机器人全景照</p>
+                <p>部署现场照</p>
+                <p>算法/系统流程图</p>
+                <p>抓取或感知过程截图</p>
+              </div>
+            </div>
+            <div id="contact" className="rounded-[28px] border border-slate-200 bg-slate-900 p-6 text-white">
+              <h3 className="text-lg font-semibold">联系与链接</h3>
+              <div className="mt-4 space-y-2 text-sm leading-7 text-slate-300">
+                <p>简历 PDF</p>
+                <p>GitHub</p>
+                <p>Email</p>
+                <p>Bilibili / YouTube / 项目链接</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
